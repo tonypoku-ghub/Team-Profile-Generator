@@ -10,7 +10,7 @@ let answers = {
 
 let mgr = new Manager("Tom", "1", "tom.test@test.com", "45");
 
-let eng = new Engineer("Tom", "2", "tom.test@test.com", "tom-ghub");
+let eng = new Engineer("Ted", "2", "ted.test@test.com", "ted-ghub");
 
 let eng1 = new Engineer("Sam", "3", "sam.test@test.com", "sam-ghub");
 

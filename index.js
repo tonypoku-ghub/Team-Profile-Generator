@@ -53,12 +53,12 @@ async function init() {
         sec_answers.name,
         sec_answers.id,
         sec_answers.email,
-        sec_answers.github
+        sec_answers.github_username
       );
 
       manager.addEngineer(eng);
     } else if (manager_answers.emp_type === "intern") {
-      sec_answers = await inquirer.prompt(intern_questions);
+      sec_answers = await inquirer.prompt(Intern.getQuestions());
       let intern = new Intern(
         sec_answers.name,
         sec_answers.id,
@@ -78,7 +78,8 @@ async function init() {
 
   let html = manager.generateHTML();
 
-  writeToFile("../dist/GEN_page", html);
+  writeToFile("./dist/GEN_page.html", html);
+  console.log("File successfully written to ./dist/GEN_page.html");
 }
 
 // write file
